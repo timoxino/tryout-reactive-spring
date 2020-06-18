@@ -15,6 +15,7 @@
 
   <modules>
     <module>webflux-server</module>
+    <module>rsocket-server</module>
   </modules>
 
 </project>
