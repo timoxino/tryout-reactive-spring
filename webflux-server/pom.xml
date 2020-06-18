@@ -9,9 +9,9 @@
     <relativePath/>
   </parent>
   <groupId>com.timoxino.tryout</groupId>
-  <artifactId>reactive-spring-server</artifactId>
+  <artifactId>reactive-spring-webflux-server</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <name>reactive-spring-server</name>
+  <name>reactive-spring-webflux-server</name>
   <description>Demo project for Reactive Spring</description>
 
   <properties>

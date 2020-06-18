@@ -14,7 +14,7 @@
   </properties>
 
   <modules>
-    <module>server</module>
+    <module>webflux-server</module>
   </modules>
 
 </project>
