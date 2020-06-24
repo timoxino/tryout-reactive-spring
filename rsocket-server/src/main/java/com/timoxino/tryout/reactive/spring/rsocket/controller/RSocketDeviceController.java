@@ -8,6 +8,7 @@ import lombok.extern.log4j.Log4j2;
 import org.reactivestreams.Publisher;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.stereotype.Controller;
+import reactor.core.publisher.Mono;
 
 @Controller
 @Log4j2
@@ -19,7 +20,14 @@ public class RSocketDeviceController {
     @MessageMapping("devices")
     Publisher<InternetDevice> listDevices(ReactiveRequest request) {
         String macAddress = request.getMacAddress();
-        log.info("RSocket connectivity established and request came in with mac address = {}", macAddress);
+        log.info("RSocket connectivity established and request to list came in with mac address = {}", macAddress);
         return producer.produce(macAddress);
+    }
+
+    @MessageMapping("registrations")
+    Mono<Void> register(ReactiveRequest request) {
+        log.info("RSocket connectivity established and request to register came in with mac address = {}",
+                request.getMacAddress());
+        return Mono.empty();
     }
 }

@@ -33,4 +33,9 @@ public class DeviceController {
   public Publisher<InternetDevice> listStreamedDevices(@PathVariable String mac) {
     return rSocketRequester.route("devices").data(new ReactiveRequest(mac)).retrieveFlux(InternetDevice.class);
   }
+
+  @GetMapping(value = "/rsocket/registrations")
+  public Publisher<Void> register() {
+    return rSocketRequester.route("registrations").data(new ReactiveRequest(String.valueOf(Math.random()))).send();
+  }
 }
