@@ -10,10 +10,12 @@
   <packaging>pom</packaging>
 
   <properties>
-    <java.version>11</java.version>
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
   </properties>
 
   <modules>
+    <module>model</module>
     <module>webflux-server</module>
     <module>rsocket-server</module>
   </modules>

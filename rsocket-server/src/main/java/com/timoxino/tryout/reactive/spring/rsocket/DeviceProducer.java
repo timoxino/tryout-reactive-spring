@@ -1,6 +1,6 @@
-package com.timoxino.tryout.reactive.spring;
+package com.timoxino.tryout.reactive.spring.rsocket;
 
-import com.timoxino.tryout.reactive.spring.model.InternetDevice;
+import com.timoxino.tryout.reactive.spring.rsocket.model.InternetDevice;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.stream.Stream;

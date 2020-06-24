@@ -1,4 +1,4 @@
-package com.timoxino.tryout.reactive.spring.model;
+package com.timoxino.tryout.reactive.spring.rsocket.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
