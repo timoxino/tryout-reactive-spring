@@ -34,6 +34,11 @@ public class DeviceController {
     return rSocketRequester.route("devices").data(new ReactiveRequest(mac)).retrieveFlux(InternetDevice.class);
   }
 
+  @GetMapping(value = "/rsocket/devices/failing/{mac}", produces = TEXT_EVENT_STREAM_VALUE)
+  public Publisher<InternetDevice> listFailingDevices(@PathVariable String mac) {
+    return rSocketRequester.route("failing-devices").data(new ReactiveRequest(mac)).retrieveFlux(InternetDevice.class);
+  }
+
   @GetMapping(value = "/rsocket/registrations")
   public Publisher<Void> register() {
     return rSocketRequester.route("registrations").data(new ReactiveRequest(String.valueOf(Math.random()))).send();
